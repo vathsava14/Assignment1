@@ -19,7 +19,7 @@ namespace Assignment1
             Console.WriteLine("Q2 : Enter the number of terms in the Pell Series:");
             int n2 = Convert.ToInt32(Console.ReadLine());
             printPellSeries(n2);
-            Console.WriteLine();
+            Console.WriteLine("\n");
 
             //Question 3:
             Console.WriteLine("Q3 : Enter the number to check if squareSums exist:");
@@ -33,6 +33,7 @@ namespace Assignment1
             {
                 Console.WriteLine("No, the number cannot be expressed as a sum of squares of 2 integers");
             }
+            Console.WriteLine();
 
             //Question 4:
             int[] arr = { 3, 1, 4, 1, 5 };
@@ -40,6 +41,7 @@ namespace Assignment1
             int k = Convert.ToInt32(Console.ReadLine());
             int n4 = diffPairs(arr, k);
             Console.WriteLine("There exists {0} pairs with the given difference", n4);
+            Console.WriteLine();
 
             //Question 5:
             List<string> emails = new List<string>();
@@ -49,6 +51,7 @@ namespace Assignment1
             int ans5 = UniqueEmails(emails);
             Console.WriteLine("Q5");
             Console.WriteLine("The number of unique emails is " + ans5);
+            Console.WriteLine();
 
             //Quesiton 6:
             string[,] paths = new string[,] { { "London", "New York" }, { "New York", "Tampa" },
@@ -56,6 +59,7 @@ namespace Assignment1
             string destination = DestCity(paths);
             Console.WriteLine("Q6");
             Console.WriteLine("Destination city is " + destination);
+            Console.WriteLine();
 
         }
 
@@ -246,11 +250,7 @@ namespace Assignment1
                     {
                         for (int z4 = 0; z4 < dummy.Length; z4++)
                         {
-                            if ((dummy[dummy.Length - 1] - dummy[0]) < k) // In case the difference between the numbers is bigger than the difference between the largest & smallest value in the array then it returns 0
-                            {
-                                finalCount = 0;
-                            }
-                            else if ((dummy[z3] - dummy[z4] == k) && (dummy[z3] > dummy[z4]) && (z3 != z4)) // In other cases, it calculates the exact number of pairs by traversing through the second array which has only unique numbers
+                           if ((dummy[z3] - dummy[z4] == k) && (dummy[z3] > dummy[z4]) && (z3 != z4)) // In other cases, it calculates the exact number of pairs by traversing through the second array which has only unique numbers
                             {
                                 finalCount++; // Whenever a pair has the difference that is equal to the number specified it adds the final count of the pairs
                             }
