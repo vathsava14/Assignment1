@@ -250,7 +250,7 @@ namespace Assignment1
                     {
                         for (int z4 = 0; z4 < dummy.Length; z4++)
                         {
-                            if ((dummy[z3] - dummy[z4] == k) && (dummy[z3] > dummy[z4]) && (z3 != z4) && (dummy[z4] >0)) // In other cases, it calculates the exact number of pairs by traversing through the second array which has only unique numbers
+                            if ((dummy[z3] - dummy[z4] == k) && (dummy[z3] > dummy[z4]) && (z3 != z4) && (dummy[z4] > 0)) // In other cases, it calculates the exact number of pairs by traversing through the second array which has only unique numbers
                             {
                                 finalCount++; // Whenever a pair has the difference that is equal to the number specified it adds the final count of the pairs
                             }
