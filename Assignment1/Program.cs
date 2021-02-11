@@ -80,17 +80,24 @@ namespace Assignment1
         {
             try
             {
-                for (int r = 1; r <= n; r++)    // Created this for loop for creating the number of rows as the input number by the user
+                if (n > 0)
                 {
-                    for (int c = 1; c <= n - r; c++) // This for loop is used in columns for filling up the spaces in places other than '*'
+                    for (int r = 1; r <= n; r++)    // Created this for loop for creating the number of rows as the input number by the user
                     {
-                        Console.Write(" "); // Whenever the loop reaches the column 'c1' other than the one's having the star 'n-r' columns are filled with space
+                        for (int c = 1; c <= n - r; c++) // This for loop is used in columns for filling up the spaces in places other than '*'
+                        {
+                            Console.Write(" "); // Whenever the loop reaches the column 'c1' other than the one's having the star 'n-r' columns are filled with space
+                        }
+                        for (int c = 1; c <= 2 * r - 1; c++) // This for loop prints the '2r-1' odd number of stars based on the row number
+                        {
+                            Console.Write("*"); // With respect to the row number 'r' that corresponding '2r-1' number of stars are printed in each row
+                        }
+                        Console.WriteLine();    // Once each row is completed the next row is printed on the next line
                     }
-                    for (int c = 1; c <= 2 * r - 1; c++) // This for loop prints the '2r-1' odd number of stars based on the row number
-                    {
-                        Console.Write("*"); // With respect to the row number 'r' that corresponding '2r-1' number of stars are printed in each row
-                    }
-                    Console.WriteLine();    // Once each row is completed the next row is printed on the next line
+                }
+                else
+                {
+                    Console.WriteLine("Enter a positive number greater than 0");
                 }
             }
             catch (Exception)
@@ -117,9 +124,9 @@ namespace Assignment1
             try
             {
                 int i = 1, j = 0, res = 0, sum = 0;
-                if (n2 == 0) // If the user asks for 0 terms from the Pell series then it returns 'N/A'
+                if (n2 <= 0) // If the user asks for 0 terms from the Pell series then it returns 'N/A'
                 {
-                    Console.WriteLine("N/A");
+                    Console.WriteLine("N/A. Enter a proper number greater than 0");
                 }
                 else if (n2 == 1) // If the user asks for the first term from the pell series it returns the value of 'j'
                 {
